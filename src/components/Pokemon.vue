@@ -1,20 +1,7 @@
 <template>
   <div class="card padbottom">
-    <img class="card-img-top" :src="pokemon.image_url" :alt="pokemon.name.english"></img>
-    <h5 class="card-title">{{ pokemon.name.english }}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">#{{ pokemon.id }}</h6>
-    <div class="card-body">
-      <a class="btn btn-primary" data-toggle="collapse" :href="href" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Stats
-      </a>
-    </div>
-    <div class="collapse" :id="id">
-      <div class="card-body">
-        <ul v-for="(stat, statName) in pokemon.base" class="list-group list-group-flush">
-          <li class="list-group-item">{{statName}}: {{stat}}</li>
-        </ul>
-      </div>
-    </div>
+    <h5 class="card-title">{{ pokemon.english_name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">#{{ pokemon.pokedex_number }}</h6>
   </div>
 </template>
 
@@ -28,10 +15,10 @@ export default {
   },
   computed: {
     id() {
-      return this.pokemon.name.english
+      return this.pokemon.english_name
     },
     href() {
-      return "#" + this.pokemon.name.english
+      return "#" + this.pokemon.english_name
     }
   }
 };
