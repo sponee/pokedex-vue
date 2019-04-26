@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = process.env.API_URL || "http://localhost:3000";
+const API_URL = "http://railspokedexapi-env.7qspmepzfj.us-east-1.elasticbeanstalk.com/" || "http://localhost:3000";
 
 // `baseURL` is prepended to URLs passed to axios
 axios.defaults.baseURL = API_URL;

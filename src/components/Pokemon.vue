@@ -1,7 +1,7 @@
 <template>
-  <div class="card padbottom">
+  <div class="card mb-4">
     <h5 class="card-title">{{ pokemon.english_name }}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">#{{ pokemon.pokedex_number }}</h6>
+    <h6 class="card-subtitle text-muted">#{{ pokemon.pokedex_number }}</h6>
     <div class="ball"><div class="button"></div></div>
   </div>
 </template>
@@ -36,13 +36,11 @@ export default {
 .ball {
   position: relative;
   width: 200px;
-  min-width: 50px;
   height: 200px;
-  min-heigh: 50px;
   margin: 30px auto;
   border-radius: 50%;
   border: solid;
-  background-image: -webkit-linear-gradient(-90deg, #D00 45%, #333 45%, #3f3f3f 50%, #333 55%, #FFF 55%);
+  background-image: -webkit-linear-gradient(-90deg, #D00 45%, #333, #333, #333 50%, #FFF 0);
 }
 
 .button {
